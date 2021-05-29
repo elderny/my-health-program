@@ -45,7 +45,7 @@ while(True):
                         mixer.init()
                         mixer.music.load("water.mp3")
                         mixer.music.set_volume(0.7)
-                        mixer.music.play()
+                        mixer.music.play(-1)
                     water_music = water_music()
                     ask = input("Type 'drank' to stop the music if you Drank the Water\n" + "Type Here: ").lower()
                     if ask == "drank":
@@ -63,7 +63,7 @@ while(True):
                         mixer.init()
                         mixer.music.load("eyes.mp3")
                         mixer.music.set_volume(0.7)
-                        mixer.music.play()
+                        mixer.music.play(-1)
                     eye_music = eye_music()
                     ask = input("Type 'Done' to stop the music if you did eye exercise\n" + "Type Here: ").lower()
                     if ask == "done":
@@ -81,7 +81,7 @@ while(True):
                         mixer.init()
                         mixer.music.load("exercise.mp3")
                         mixer.music.set_volume(0.7)
-                        mixer.music.play()
+                        mixer.music.play(-1)
                     exercise_music = exercise_music()
                     ask = input("Type 'Finish' to stop the music if you did exercises\n" + "Type Here: ").lower()
                     if ask == "finish":
@@ -94,6 +94,9 @@ while(True):
         else:
             print("BREAK!!")
             break
+    if end > 24:
+        print("Alien xD")
+        break
     else:
         if exercise_required <= 1:
             print("Work done")
